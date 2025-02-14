@@ -67,7 +67,7 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [touched, setTouched] = useState<Record<string, boolean>>({});
-  const { playSuccess, playClick } = useSound();
+  const { playSuccess } = useSound();
   const [lastSubmitTime, setLastSubmitTime] = useState<number>(0);
   const [submitCount, setSubmitCount] = useState<number>(0);
 
@@ -180,7 +180,7 @@ export default function ContactForm() {
       setStatus('success');
       playSuccess();
       setFormState({ name: '', email: '', message: '' });
-    } catch (error) {
+    } catch {
       setStatus('error');
     } finally {
       setTimeout(() => setStatus('idle'), 3000);

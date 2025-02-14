@@ -1,7 +1,7 @@
 "use client";
 
 import React, { JSX } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   SiReact, SiJavascript, SiHtml5, SiDotnet,
   SiFlutter, SiDart, SiOpenjdk,
@@ -10,7 +10,6 @@ import {
 } from 'react-icons/si';
 import { FaGamepad } from 'react-icons/fa';
 import Tooltip from './ui/Tooltip';
-import { useSound } from '@/hooks/useSound';
 import AnimatedIcon from './ui/AnimatedIcon';
 
 const skillCategories = [
@@ -118,9 +117,6 @@ const categoryVariants = {
 };
 
 export default function SkillsGraph() {
-  const { scrollYProgress } = useScroll();
-  const { playHover } = useSound();
-
   return (
     <motion.div 
       className="space-y-8"

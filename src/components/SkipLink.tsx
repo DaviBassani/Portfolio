@@ -1,14 +1,12 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function SkipLink() {
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        setIsVisible(true);
+        // fazer algo aqui ou remover
       }
     };
 

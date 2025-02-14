@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useGestures } from '@/hooks/useGestures';
 import { useSound } from '@/hooks/useSound';
