@@ -111,11 +111,11 @@ git clone https://github.com/seu-usuario/portfolio
 npm install
 ```
 
-3. Configure as variáveis de ambiente
+3. Configure as variáveis de ambiente em `.env.local`:
 ```env
-EMAILJS_SERVICE_ID=seu_service_id
-EMAILJS_TEMPLATE_ID=seu_template_id
-EMAILJS_PUBLIC_KEY=sua_public_key
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=seu_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=seu_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=sua_public_key
 ```
 
 4. Rode o projeto

@@ -158,14 +158,14 @@ export default function ContactForm() {
 
     try {
       await send(
-        'service_wv3ad09',
-        'template_m527ex7',
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
           from_name: formState.name,
           reply_to: formState.email,
           message: formState.message
         },
-        '-GxWH_eydkdXRUw6S'     // Sua Public Key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
 
       // Atualizar contagem de submissões
